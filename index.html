@@ -2,9 +2,103 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Krankenkassenkompass - Beratung</title>
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        color: #2d3748;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        max-width: 800px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        line-height: 1.6;
+        color: #4a5568;
+    }
+    
+    .description h2 {
+        color: #2d3748;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .avatar-container {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        padding: 20px;
+        position: relative;
+    }
+    
+    /* Override HeyGen Styles für zentrale Positionierung */
+    #heygen-streaming-embed {
+        position: relative !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 8px !important;
+        border: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+</style>
+</head>
+<body>
+    <h1>🇨🇭 Krankenkassenkompass</h1>
+    
+    <div class="description">
+        <p><strong>Das Schweizer Krankenversicherungssystem</strong> basiert auf dem Krankenversicherungsgesetz (KVG) und ist für alle in der Schweiz wohnhaften Personen obligatorisch.</p>
+        
+        <h2>Grundversicherung (KVG)</h2>
+        <p>Jede Person muss eine Grundversicherung abschliessen. Diese deckt medizinisch notwendige Leistungen ab. Die Krankenkassen müssen jeden aufnehmen (Aufnahmepflicht), unabhängig von Alter oder Gesundheitszustand.</p>
+        
+        <h2>Kostenbeteiligung</h2>
+        <p><strong>Franchise:</strong> Jährlicher Selbstbehalt zwischen CHF 300 und CHF 2'500 für Erwachsene. Je höher die Franchise, desto tiefer die monatliche Prämie.<br>
+        <strong>Selbstbehalt:</strong> 10% der Kosten nach Erreichen der Franchise (max. CHF 700 pro Jahr).</p>
+        
+        <h2>Versicherungsmodelle</h2>
+        <p>• <strong>Standard:</strong> Freie Arztwahl<br>
+        • <strong>HMO:</strong> Erstkontakt über Gruppenpraxis<br>
+        • <strong>Hausarzt:</strong> Erstkontakt über gewählten Hausarzt<br>
+        • <strong>Telmed:</strong> Erstkontakt über telefonische Beratung</p>
+        
+        <p style="margin-top: 20px; padding: 15px; background: #e8f4fd; border-radius: 5px;">
+        💬 <strong>Stellen Sie Ihre Fragen direkt an unseren KI-Berater!</strong>
+        </p>
+    </div>
+    
+<head>
+<meta charset="utf-8">
 <title>HeyGen Streaming Avatar</title>
 </head>
 <body>
 </body>
 <script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJSaWthX0JsdWVfU3VpdF9wdWJsaWMiLCJw%0D%0AcmV2aWV3SW1nIjoiaHR0cHM6Ly9maWxlczIuaGV5Z2VuLmFpL2F2YXRhci92My9lOWE2OTMzZTEw%0D%0AZjk0MjczYTcyYTQ4NGQ5OWZmNTYxOF81NTQzMC9wcmV2aWV3X3RhbGtfMS53ZWJwIiwibmVlZFJl%0D%0AbW92ZUJhY2tncm91bmQiOnRydWUsImtub3dsZWRnZUJhc2VJZCI6ImYyZjhkNzdiMzY2MDRkZjc4%0D%0AODNiOTJmYjhmY2QwMjIxIiwidXNlcm5hbWUiOiJjNjZmODZlNDNlNGE0ZTFmYTFhYWJlNWI3YTA1%0D%0AOTcyNCJ9&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    left: 40px;\n    bottom: 40px;\n    width: 200px;\n    height: 200px;\n    border-radius: 50%;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
+</body>
 </html>
+
+
